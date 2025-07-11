@@ -62,6 +62,10 @@ p {
     color: var(--text-secondary);
 }
 
+a {
+    cursor: pointer;
+}
+
 /* Sidebar Navigation */
 .sidebar {
     position: fixed;
@@ -91,6 +95,7 @@ p {
     text-decoration: none;
     color: inherit;
     transition: all 0.3s ease;
+    
 }
 
 .nav-logo img {
@@ -162,6 +167,7 @@ p {
     text-decoration: none;
     transition: background 0.2s, box-shadow 0.2s, transform 0.2s, border-color 0.2s;
     border: 1px solid var(--border-color);
+    
 }
 
 .social-link img {
@@ -200,6 +206,7 @@ p {
     transition: color 0.3s ease;
     padding: 12px 16px;
     letter-spacing: -0.015em;
+    
 }
 
 .nav-link:hover,
@@ -313,11 +320,31 @@ p {
     border-left: 4px solid var(--secondary-color);
 }
 
+.career-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
 .career-text,
 .education-text {
     font-size: 1rem;
     font-weight: 500;
     color: var(--text-primary);
+}
+
+.career-subtext {
+    font-size: 0.875rem;
+    font-weight: 400;
+    color: var(--text-secondary);
+    text-decoration: none;
+    transition: color 0.3s ease;
+    
+}
+
+.career-subtext:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
 }
 
 .career-badge {
@@ -328,6 +355,269 @@ p {
     font-size: 0.75rem;
     font-weight: 600;
     letter-spacing: 0.5px;
+}
+
+/* Skills Section */
+.skills-section {
+    padding: 120px 0;
+    background: var(--bg-primary);
+}
+
+.skills-container {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+    margin-bottom: 3rem;
+}
+
+.skill-item {
+    background: white;
+    padding: 1.5rem 1rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.skill-item:hover {
+    transform: translateY(-8px);
+    box-shadow: var(--shadow-lg);
+    border-color: var(--secondary-color);
+}
+
+.skill-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+    display: block;
+}
+
+.skill-name {
+    font-size: 1.125rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.skill-detail {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin: 0;
+    font-weight: 400;
+}
+
+.skills-motto {
+    background: var(--gradient-primary);
+    color: white;
+    padding: 1.5rem 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+    margin: 0 auto;
+}
+
+.skills-motto p {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin: 0;
+    letter-spacing: -0.02em;
+    text-align: center;
+    color: #ffffff;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Teaching Section */
+.teaching-section {
+    padding: 4rem 0;
+    background: var(--bg-secondary);
+}
+
+.teaching-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.teaching-card {
+    background: var(--bg-primary);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.teaching-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.teaching-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.teaching-list {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.teaching-item {
+    display: flex;
+    align-items: center;
+    padding: 1.25rem;
+    background: var(--bg-secondary);
+    border-radius: 12px;
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.teaching-item:hover {
+    background: #f0f0f0;
+    border-color: #e0e0e0;
+    transform: translateX(4px);
+}
+
+.teaching-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    flex: 1;
+}
+
+.teaching-text {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--text-primary);
+    line-height: 1.4;
+    letter-spacing: -0.01em;
+}
+
+/* Book Section */
+.book-section {
+    padding: 4rem 0;
+    background: var(--bg-primary);
+}
+
+.book-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.book-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    
+}
+
+.book-card {
+    display: grid;
+    grid-template-columns: 200px 1fr;
+    gap: 2rem;
+    background: var(--bg-secondary);
+    border-radius: 16px;
+    padding: 2rem;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    align-items: center;
+    
+}
+
+.book-card:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-2px);
+}
+
+.book-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.book-cover {
+    width: 160px;
+    height: auto;
+    border-radius: 6px;
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.book-cover:hover {
+    transform: scale(1.05);
+    box-shadow: var(--shadow-lg);
+}
+
+.book-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.book-title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-primary);
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    margin: 0;
+}
+
+.book-description {
+    font-size: 1rem;
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin: 0;
+    letter-spacing: -0.01em;
+}
+
+.learning-section {
+    margin-bottom: 3rem;
+}
+
+.learning-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+    text-align: center;
+    position: relative;
+}
+
+.learning-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
+}
+
+.learning-grid {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.skill-item.learning {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.02) 0%, rgba(0, 0, 0, 0.05) 100%);
+    border: 2px dashed var(--border-color);
+    opacity: 0.8;
+}
+
+.skill-item.learning:hover {
+    opacity: 1;
+    border-color: var(--secondary-color);
+    background: white;
 }
 
 .about-container {
@@ -407,6 +697,27 @@ p {
     line-height: 1.6;
     letter-spacing: -0.01em;
     text-align: center;
+}
+
+.highlight-text {
+    position: relative;
+    display: inline-block;
+    font-weight: 600;
+    color: var(--text-primary);
+}
+
+.highlight-text::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -2px;
+    right: -2px;
+    bottom: 0;
+    background: linear-gradient(120deg, #ffeb3b 0%, #ffc107 50%, #ff9800 100%);
+    opacity: 0.7;
+    transform: rotate(-1deg);
+    z-index: -1;
+    border-radius: 3px;
 }
 
 /* Mobile menu toggle - hidden by default */
@@ -493,7 +804,7 @@ p {
     font-weight: 600;
     font-size: 1rem;
     transition: all 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
-    cursor: pointer;
+    
     border: none;
     letter-spacing: -0.015em;
     position: relative;
@@ -829,7 +1140,7 @@ p {
         border: none;
         border-radius: 8px;
         padding: 12px;
-        cursor: pointer;
+        
         box-shadow: var(--shadow-lg);
         transition: all 0.3s ease;
     }
@@ -1084,7 +1395,7 @@ p {
     padding: 0.8rem 1rem;
     background: white;
     border-radius: 8px;
-    cursor: pointer;
+    
     transition: all 0.3s ease;
 }
 
@@ -1382,7 +1693,7 @@ p {
     color: #666;
     padding: 1rem 2rem;
     border-radius: 25px;
-    cursor: pointer;
+    
     font-weight: 600;
     transition: all 0.3s ease;
 }
@@ -1938,7 +2249,7 @@ p {
     }
     
     .hero-subtitle {
-        font-size: 1.1rem;
+        font-size: 1.125rem;
         line-height: 1.6;
     }
     
@@ -2024,7 +2335,8 @@ p {
     .testimonials,
     .contact-section,
     .faq-section,
-    .quick-actions {
+    .quick-actions,
+    .skills-section {
         padding: 60px 0;
     }
 }
@@ -2145,6 +2457,95 @@ p {
     .education-text {
         font-size: 0.9rem;
     }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .skill-item {
+        padding: 1.25rem 0.75rem;
+    }
+
+    .skill-icon {
+        font-size: 2rem;
+    }
+
+    .skill-name {
+        font-size: 1rem;
+    }
+
+    .skills-motto {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .skills-motto p {
+        font-size: 1.125rem;
+    }
+
+    .learning-title {
+        font-size: 0.95rem;
+        margin-bottom: 1rem;
+    }
+
+    .learning-grid {
+        max-width: 250px;
+    }
+
+    .skills-motto {
+        padding: 1rem 1.25rem;
+    }
+
+    .skills-motto p {
+        font-size: 1rem;
+    }
+
+    .learning-title {
+        font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .learning-grid {
+        max-width: 300px;
+    }
+
+    .teaching-section {
+        padding: 2rem 0;
+    }
+
+    .teaching-card {
+        padding: 1.5rem;
+    }
+
+    .teaching-item {
+        padding: 1rem;
+    }
+
+    .teaching-text {
+        font-size: 1rem;
+    }
+
+    .book-section {
+        padding: 2rem 0;
+    }
+
+    .book-card {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.25rem;
+    }
+
+    .book-cover {
+        width: 140px;
+    }
+
+    .book-title {
+        font-size: 1.25rem;
+    }
+
+    .book-description {
+        font-size: 0.95rem;
+    }
 }
 
 /* Landscape mobile optimization */
@@ -2199,8 +2600,6 @@ p {
         animation: none;
     }
 }
-
-
 
 /* Mobile device specific styles */
 .mobile-device {
@@ -2265,10 +2664,13 @@ p {
 
 /* Improved focus states for accessibility */
 .nav-link:focus,
-.btn:focus,
-.social-link:focus {
+.btn:focus {
     outline: 2px solid var(--secondary-color);
     outline-offset: 2px;
+}
+
+.social-link:focus {
+    outline: none;
 }
 
 /* Better hover states for touch devices */

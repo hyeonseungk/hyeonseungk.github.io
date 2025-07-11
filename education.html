@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Education - 김현승</title>
+    <meta name="description" content="React Native와 바이브 코딩 교육 프로그램을 소개합니다.">
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">김현승</a>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="portfolio.html" class="nav-link">Portfolio</a>
+                </li>
+                <li class="nav-item">
+                    <a href="education.html" class="nav-link active">Education</a>
+                </li>
+                <li class="nav-item">
+                    <a href="contact.html" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="container">
+            <h1>Education Programs</h1>
+            <p>실무 경험을 바탕으로 한 체계적인 React Native & 바이브 코딩 교육</p>
+        </div>
+    </section>
+
+    <!-- Education Types -->
+    <section class="education-types">
+        <div class="container">
+            <h2>교육 서비스 형태</h2>
+            <div class="types-grid">
+                <div class="type-card">
+                    <div class="type-icon">🏢</div>
+                    <h3>기업 출강 교육</h3>
+                    <p>팀 전체를 대상으로 한 맞춤형 React Native 교육</p>
+                    <ul class="type-features">
+                        <li>✅ 회사 내 교육장 방문</li>
+                        <li>✅ 팀 프로젝트 기반 학습</li>
+                        <li>✅ 실무 적용 중심 커리큘럼</li>
+                        <li>✅ 지속적인 멘토링 제공</li>
+                    </ul>
+                    <div class="type-price">문의 후 견적</div>
+                </div>
+
+                <div class="type-card featured">
+                    <div class="type-badge">추천</div>
+                    <div class="type-icon">💻</div>
+                    <h3>온라인 개인 레슨</h3>
+                    <p>1:1 맞춤형 온라인 교육으로 빠른 성장</p>
+                    <ul class="type-features">
+                        <li>✅ 개인 맞춤 진도</li>
+                        <li>✅ 실시간 코드 리뷰</li>
+                        <li>✅ 포트폴리오 프로젝트 개발</li>
+                        <li>✅ 언제든 질문 가능</li>
+                    </ul>
+                    <div class="type-price">시간당 8만원</div>
+                </div>
+
+                <div class="type-card">
+                    <div class="type-icon">🏫</div>
+                    <h3>워크샵 & 부트캠프</h3>
+                    <p>단기간 집중 교육으로 핵심 스킬 습득</p>
+                    <ul class="type-features">
+                        <li>✅ 2-5일 집중 과정</li>
+                        <li>✅ 소그룹 위주 수업</li>
+                        <li>✅ 실습 중심 진행</li>
+                        <li>✅ 수료증 발급</li>
+                    </ul>
+                    <div class="type-price">50-200만원</div>
+                </div>
+
+                <div class="type-card">
+                    <div class="type-icon">🤝</div>
+                    <h3>멘토링 & 컨설팅</h3>
+                    <p>프로젝트별 전문 컨설팅 및 멘토링</p>
+                    <ul class="type-features">
+                        <li>✅ 1인개발 컨설팅</li>
+                        <li>✅ 앱 수익화 전략</li>
+                        <li>✅ 코드 아키텍처 리뷰</li>
+                        <li>✅ 커리어 상담</li>
+                    </ul>
+                    <div class="type-price">시간당 10만원</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curriculum -->
+    <section class="curriculum-section">
+        <div class="container">
+            <h2>React Native 커리큘럼</h2>
+            <div class="curriculum-tabs">
+                <button class="tab-button active" data-tab="beginner">입문자</button>
+                <button class="tab-button" data-tab="intermediate">중급자</button>
+                <button class="tab-button" data-tab="advanced">고급자</button>
+            </div>
+
+            <div class="curriculum-content">
+                <div class="tab-content active" id="beginner">
+                    <div class="curriculum-grid">
+                        <div class="curriculum-module">
+                            <h3>1. 개발 환경 설정</h3>
+                            <ul>
+                                <li>React Native 개발 환경 구축</li>
+                                <li>Expo vs React Native CLI</li>
+                                <li>안드로이드/iOS 개발자 계정 설정</li>
+                                <li>디버깅 도구 사용법</li>
+                            </ul>
+                        </div>
+                        <div class="curriculum-module">
+                            <h3>2. React Native 기초</h3>
+                            <ul>
+                                <li>컴포넌트와 JSX 이해</li>
+                                <li>State와 Props 활용</li>
+                                <li>기본 레이아웃과 스타일링</li>
+                                <li>리스트와 스크롤뷰 구현</li>
+                            </ul>
+                        </div>
+                        <div class="curriculum-module">
+                            <h3>3. 네비게이션</h3>
+                            <ul>
+                                <li>React Navigation 설치와 설정</li>
+                                <li>Stack, Tab, Drawer Navigation</li>
+                                <li>화면 간 데이터 전달</li>
+                                <li>네비게이션 커스터마이징</li>
+                            </ul>
+                        </div>
+                        <div class="curriculum-module">
+                            <h3>4. 첫 번째 앱 완성</h3>
+                            <ul>
+                                <li>간단한 투두 앱 만들기</li>
+                                <li>로컬 데이터 저장</li>
+                                <li>앱 스토어 배포 준비</li>
+                                <li>포트폴리오 정리</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="intermediate">
+                    <div class="curriculum-grid">
+                        <div class="curriculum-module">
+                            <h3>1. 고급 컴포넌트</h3>
+                            <ul>
+                                <li>Custom Hook 개발</li>
+                                <li>Context API 활용</li>
+                                <li>애니메이션 구현</li>
+                                <li>성능 최적화 기법</li>
+                            </ul>
+                        </div>
+                        <div class="curriculum-module">
+                            <h3>2. API 연동</h3>
+                            <ul>
+                                <li>REST API 통신</li>
+                                <li>비동기 처리와 에러 핸들링</li>
+                                <li>인증/인가 시스템</li>
+                                <li>오프라인 대응</li>
+                            </ul>
+                        </div>
+                        <div class="curriculum-module">
+                            <h3>3. 네이티브 모듈</h3>
+                            <ul>
+                                <li>카메라와 갤러리 접근</li>
+                                <li>푸시 알림 구현</li>
+                                <li>위치 서비스 활용</li>
+                                <li>소셜 로그인 연동</li>
+                            </ul>
+                        </div>
+                        <div class="curriculum-module">
+                            <h3>4. 프로젝트 완성</h3>
+                            <ul>
+                                <li>실제 서비스 앱 개발</li>
+                                <li>테스팅과 디버깅</li>
+                                <li>스토어 등록 및 배포</li>
+                                <li>유지보수 계획</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="tab-content" id="advanced">
+                    <div class="curriculum-grid">
+                        <div class="curriculum-module">
+                            <h3>1. 아키텍처 설계</h3>
+                            <ul>
+                                <li>확장 가능한 폴더 구조</li>
+                                <li>상태 관리 라이브러리</li>
+                                <li>모듈화와 재사용성</li>
+                                <li>코드 품질 관리</li>
+                            </ul>
+                        </div>
+                        <div class="curriculum-module">
+                            <h3>2. 고급 기능 구현</h3>
+                            <ul>
+                                <li>실시간 통신 (WebSocket)</li>
+                                <li>백그라운드 작업</li>
+                                <li>deep linking 구현</li>
+                                <li>보안 강화 기법</li>
+                            </ul>
+                        </div>
+                        <div class="curriculum-module">
+                            <h3>3. 수익화 전략</h3>
+                            <ul>
+                                <li>인앱 결제 시스템</li>
+                                <li>광고 모델 적용</li>
+                                <li>구독 서비스 구현</li>
+                                <li>사용자 분석 도구</li>
+                            </ul>
+                        </div>
+                        <div class="curriculum-module">
+                            <h3>4. 1인개발 마스터</h3>
+                            <ul>
+                                <li>MVP 개발 방법론</li>
+                                <li>마케팅과 사용자 획득</li>
+                                <li>데이터 분석과 개선</li>
+                                <li>지속 가능한 수익 모델</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Vibe Coding -->
+    <section class="vibe-coding">
+        <div class="container">
+            <div class="vibe-content">
+                <div class="vibe-text">
+                    <h2>바이브 코딩이란? 🎵</h2>
+                    <p>
+                        <strong>바이브 코딩</strong>은 단순히 코드를 작성하는 것을 넘어서, 
+                        개발하는 과정 자체를 즐기고 몰입할 수 있도록 하는 코딩 방법론입니다.
+                    </p>
+                    
+                    <div class="vibe-features">
+                        <div class="vibe-feature">
+                            <span class="vibe-icon">🎯</span>
+                            <div>
+                                <h4>몰입감 있는 학습</h4>
+                                <p>게임처럼 재미있고 중독성 있는 코딩 경험</p>
+                            </div>
+                        </div>
+                        <div class="vibe-feature">
+                            <span class="vibe-icon">🚀</span>
+                            <div>
+                                <h4>빠른 성장</h4>
+                                <p>지루함 없이 자연스럽게 실력이 늘어나는 학습법</p>
+                            </div>
+                        </div>
+                        <div class="vibe-feature">
+                            <span class="vibe-icon">💡</span>
+                            <div>
+                                <h4>창의적 사고</h4>
+                                <p>정답이 아닌 나만의 스타일로 문제 해결</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="vibe-visual">
+                    <div class="code-vibe">
+                        <div class="vibe-code-block">
+                            <pre><code>// 바이브 코딩의 핵심은 즐거움! 🎉
+const createAwesomeApp = () => {
+  const passion = '열정';
+  const creativity = '창의력';
+  const fun = '재미';
+  
+  return passion + creativity + fun;
+};
+
+// 코딩은 예술이다! ✨
+console.log('Hello, Vibe Coding! 🎵');</code></pre>
+                        </div>
+                        <div class="vibe-effects">
+                            <span class="vibe-particle">✨</span>
+                            <span class="vibe-particle">🎵</span>
+                            <span class="vibe-particle">🚀</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials -->
+    <section class="testimonials">
+        <div class="container">
+            <h2>수강생 후기</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p>"비전공자인 제가 6개월 만에 앱을 만들어서 스토어에 올릴 수 있었어요! 정말 쉽게 설명해주셔서 이해가 잘 됐습니다."</p>
+                    <div class="testimonial-author">
+                        <strong>김○○님</strong>
+                        <span>마케터 → 앱 개발자</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p>"1인개발의 노하우를 배워서 사이드 프로젝트로 월 100만원 수익을 만들었어요. 실무 경험이 정말 도움 됐습니다."</p>
+                    <div class="testimonial-author">
+                        <strong>박○○님</strong>
+                        <span>백엔드 개발자</span>
+                    </div>
+                </div>
+                
+                <div class="testimonial-card">
+                    <div class="testimonial-rating">⭐⭐⭐⭐⭐</div>
+                    <p>"바이브 코딩 방식이 정말 신선했어요. 코딩이 이렇게 재미있을 줄 몰랐습니다. 팀원들도 모두 만족했어요."</p>
+                    <div class="testimonial-author">
+                        <strong>이○○님</strong>
+                        <span>스타트업 CTO</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta">
+        <div class="container">
+            <div class="cta-content">
+                <h2>지금 바로 시작해보세요!</h2>
+                <p>여러분의 개발 여정을 함께 하겠습니다. 무료 상담부터 시작해보세요.</p>
+                <a href="contact.html" class="btn btn-primary btn-large">무료 상담 신청</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <h3>김현승</h3>
+                    <p>React Native & 바이브 코딩 교육 전문가</p>
+                </div>
+                <div class="footer-links">
+                    <a href="mailto:contact@example.com">이메일 문의</a>
+                    <a href="#" target="_blank">GitHub</a>
+                    <a href="#" target="_blank">LinkedIn</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 김현승. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Tab functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const tabButtons = document.querySelectorAll('.tab-button');
+            const tabContents = document.querySelectorAll('.tab-content');
+
+            tabButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    const targetTab = button.getAttribute('data-tab');
+                    
+                    // Remove active class from all buttons and contents
+                    tabButtons.forEach(btn => btn.classList.remove('active'));
+                    tabContents.forEach(content => content.classList.remove('active'));
+                    
+                    // Add active class to clicked button and corresponding content
+                    button.classList.add('active');
+                    document.getElementById(targetTab).classList.add('active');
+                });
+            });
+        });
+    </script>
+</body>
+</html> 

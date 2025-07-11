@@ -91,13 +91,15 @@ document.addEventListener("DOMContentLoaded", function () {
 
   // Navbar scroll effect
   const navbar = document.querySelector(".navbar");
-  window.addEventListener("scroll", function () {
-    if (window.scrollY > 50) {
-      navbar.classList.add("scrolled");
-    } else {
-      navbar.classList.remove("scrolled");
-    }
-  });
+  if (navbar) {
+    window.addEventListener("scroll", function () {
+      if (window.scrollY > 50) {
+        navbar.classList.add("scrolled");
+      } else {
+        navbar.classList.remove("scrolled");
+      }
+    });
+  }
 
   // Intersection Observer for animations
   const observerOptions = {
@@ -208,19 +210,24 @@ document.addEventListener("DOMContentLoaded", function () {
   const tabButtons = document.querySelectorAll(".tab-button");
   const tabContents = document.querySelectorAll(".tab-content");
 
-  tabButtons.forEach((button) => {
-    button.addEventListener("click", () => {
-      const tab = button.dataset.tab;
+  if (tabButtons.length > 0) {
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const tab = button.dataset.tab;
+        const tabContent = document.getElementById(tab);
 
-      // 모든 탭 버튼과 컨텐츠의 active 클래스 제거
-      tabButtons.forEach((btn) => btn.classList.remove("active"));
-      tabContents.forEach((content) => content.classList.remove("active"));
+        // 모든 탭 버튼과 컨텐츠의 active 클래스 제거
+        tabButtons.forEach((btn) => btn.classList.remove("active"));
+        tabContents.forEach((content) => content.classList.remove("active"));
 
-      // 선택된 탭 버튼과 컨텐츠에 active 클래스 추가
-      button.classList.add("active");
-      document.getElementById(tab).classList.add("active");
+        // 선택된 탭 버튼과 컨텐츠에 active 클래스 추가
+        button.classList.add("active");
+        if (tabContent) {
+          tabContent.classList.add("active");
+        }
+      });
     });
-  });
+  }
 
   // Mobile performance optimizations
   function optimizeForMobile() {
@@ -298,32 +305,19 @@ document.addEventListener("DOMContentLoaded", function () {
     optimizeForMobile();
   }
 
-  // Service Worker registration for PWA features
-  if ("serviceWorker" in navigator) {
-    window.addEventListener("load", () => {
-      navigator.serviceWorker
-        .register("/sw.js")
-        .then((registration) => {
-          console.log("SW registered: ", registration);
-        })
-        .catch((registrationError) => {
-          console.log("SW registration failed: ", registrationError);
-        });
-    });
-  }
-
   // Add loading states for better UX
-  function addLoadingStates() {
-    const links = document.querySelectorAll('a[href^="#"]');
-    links.forEach((link) => {
-      link.addEventListener("click", function () {
-        this.style.pointerEvents = "none";
-        setTimeout(() => {
-          this.style.pointerEvents = "auto";
-        }, 1000);
-      });
-    });
-  }
+  // function addLoadingStates() {
+  //   const links = document.querySelectorAll('a[href^="#"]');
+  //   links.forEach((link) => {
+  //     link.addEventListener("click", function () {
+  //       // 포인터 이벤트를 비활성화하지 않고 시각적 피드백만 제공
+  //       this.style.opacity = "0.7";
+  //       setTimeout(() => {
+  //         this.style.opacity = "1";
+  //       }, 500);
+  //     });
+  //   });
+  // }
 
-  addLoadingStates();
+  // addLoadingStates();
 });
